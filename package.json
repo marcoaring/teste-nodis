@@ -1,0 +1,89 @@
+{
+  "name": "teste-nodis",
+  "version": "0.0.1",
+  "scripts": {
+    "build:dev": "npm run clean && npm run env:dev -- gatsby build",
+    "build:hmg": "npm run clean && npm run env:hmg -- gatsby build",
+    "build:prod": "npm run clean && npm run env:prod -- gatsby build",
+    "clean": "rimraf public",
+    "cz": "git-cz",
+    "env:dev": "cross-env ACTIVE_ENV=development",
+    "env:hmg": "cross-env ACTIVE_ENV=staging",
+    "env:prod": "cross-env ACTIVE_ENV=production",
+    "format": "prettier --write 'src/**/*.js'",
+    "lint": "./node_modules/.bin/eslint src/**/*.js",
+    "precommit": "npm run lint",
+    "start:prod": "npm run env:prod -- gatsby develop --open",
+    "start:hmg": "npm run env:hmg -- gatsby develop --open",
+    "start": "npm run env:dev -- gatsby develop --open",
+    "test:coverage": "jest --coverage --passWithNoTests",
+    "test:watch": "jest --watch",
+    "test": "jest --config jest.config.js --no-cache --passWithNoTests",
+    "release": "standard-version -t ''"
+  },
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "npm run test:coverage"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "babel-jest": "^25.1.0",
+    "gatsby": "^2.19.5",
+    "gatsby-image": "^2.2.39",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-test-renderer": "^16.12.0",
+    "rodal": "^1.7.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@hot-loader/react-dom": "^16.11.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "commitizen": "^4.0.3",
+    "cross-env": "^7.0.0",
+    "cz-conventional-changelog": "^3.0.2",
+    "dotenv": "^8.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "esm": "^3.2.25",
+    "gatsby-plugin-asset-path": "^1.1.0",
+    "gatsby-plugin-layout": "^1.1.21",
+    "gatsby-plugin-manifest": "^2.2.38",
+    "gatsby-plugin-no-sourcemaps": "^2.1.2",
+    "gatsby-plugin-purgecss": "^4.0.1",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-sharp": "^2.4.0",
+    "gatsby-plugin-sitemap": "^2.2.26",
+    "gatsby-plugin-styled-components": "^3.1.18",
+    "gatsby-plugin-webpack-size": "^1.0.0",
+    "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-transformer-remark": "^2.6.48",
+    "gatsby-transformer-sharp": "^2.3.13",
+    "husky": "^4.2.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "resolve-url-loader": "^3.1.1",
+    "rimraf": "^3.0.0",
+    "standard-version": "^7.1.0",
+    "styled-components": "^5.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
