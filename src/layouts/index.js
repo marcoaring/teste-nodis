@@ -4,7 +4,9 @@ import { StaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from '../styles/global';
+import Fonts from '../styles/fonts';
 import theme from '../styles/theme';
+import { Svgs } from '../components';
 
 function Layout({ children }) {
   return (
@@ -22,6 +24,8 @@ function Layout({ children }) {
         <ThemeProvider theme={ theme }>
           <>
             <GlobalStyle />
+            <Fonts />
+            <Svgs />
             <main>
               { children }
             </main>
