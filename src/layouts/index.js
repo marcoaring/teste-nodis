@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from '../styles/global';
-import Fonts from '../styles/fonts';
 import theme from '../styles/theme';
 
 function Layout({ children }) {
@@ -23,7 +22,6 @@ function Layout({ children }) {
         <ThemeProvider theme={ theme }>
           <>
             <GlobalStyle />
-            <Fonts />
             <main>
               { children }
             </main>
