@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import {
   SEO,
-  Header
+  Header,
+  Products
 } from '../components';
 
 import { fetchData } from '../services/data';
@@ -15,7 +16,6 @@ export default function HomePage() {
     fetchData().then((data) => {
       changeProducts(data);
     });
-
   }, []);
 
   return (
@@ -23,6 +23,8 @@ export default function HomePage() {
       <SEO title="Home" />
 
       <Header changeSearch={ changeSearch } />
+
+      <Products products={ products } />
     </>
   );
 }
