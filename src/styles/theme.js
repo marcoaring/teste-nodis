@@ -1,13 +1,11 @@
 const theme = {
   fonts: {
-    fontBold: 'Arial Black',
-    fontNormal: 'Arial',
+    fontRubik: 'Rubik-Bold'
   },
   palette: {
-    bgButton: '#bbb',
-    bgButtonOver: '#999',
-    primary: '#ddd',
-    secondary: 'gray',
+    white: '#fff',
+    black: '#000',
+    primary: '#1c9956',
     textColor: '#333'
   }
 };
