@@ -10,3 +10,9 @@ export const Products = styled.section`
   max-width: 1160px;
   width: 100%;
 `;
+
+export const Warning = styled.p`
+  font: 18px ${(props) => props.theme.fonts.fontIBMRegular};
+  text-align: center;
+  text-transform: uppercase;
+`;
