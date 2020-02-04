@@ -43,6 +43,7 @@ const GlobalStyle = createGlobalStyle`
   a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
+    text-decoration: none;
   }
 
   a:active, a:hover {
