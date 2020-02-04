@@ -1,17 +1,12 @@
 import React from 'react';
-import { navigate } from 'gatsby';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Price from '../price';
-import Button from '../button';
 
 import * as S from './styles';
 
 export default function ProductCard({ product }) {
-  const buyProduct = (sku) => {
-    navigate(`/produto/${sku}`);
-  };
-
   return (
     <S.Product>
       <S.Image src={ product.imageUrl } alt={ product.name } />
@@ -19,7 +14,14 @@ export default function ProductCard({ product }) {
 
       <Price promotionalPrice={ product.promotionalPrice } price={ product.salePrice } />
 
-      <Button callback={() => buyProduct(product.id)} label='Compre agora' />
+      <Link
+        to={`/produto/${product.id}`}
+        state={{ 'sku': product.id }}
+        className='button'
+      >
+        <S.Text>Compre agora</S.Text>
+      </Link>
+
     </S.Product>
   );
 }

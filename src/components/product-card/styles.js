@@ -21,6 +21,56 @@ export const Product = styled.div`
     margin: 0px 1% 3%;
     width: 23%;
   `}
+
+  .button {
+    background-color: ${props => props.theme.palette.primary};
+    border: none;
+    color: ${props => props.theme.palette.white};
+    display: block;
+    font-family: ${props => props.theme.fonts.fontIBMRegular};
+    outline: none;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .3s linear;
+    width: 100%;
+
+    &:after {
+      background-color: ${props => props.theme.palette.primaryHover};
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: width .2s linear;
+      width: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &:after {
+        width: 100%;
+      }
+    }
+
+    ${ media.mobile`
+      font-size: 20px;
+      padding: 10px;
+    `}
+
+    ${ media.tablet`
+      font-size: 20px;
+      padding: 7px;
+    `}
+
+    ${ media.desktop`
+      font-size: 15px;
+      padding: 7px;
+    `}
+  }
 `;
 
 export const Image = styled.img`
@@ -49,4 +99,10 @@ export const Title = styled.h2`
     font-size: 14px;
     line-height: 17px;
   `}
+`;
+
+export const Text = styled.div`
+  display: block;
+  position: relative;
+  z-index: 1;
 `;
