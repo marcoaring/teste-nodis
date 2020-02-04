@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Search from '../search';
@@ -9,14 +10,16 @@ export default function Header({ changeSearch }) {
   return (
     <S.Header>
       <S.Container>
-        <S.Logo>nodis</S.Logo>
+        <Link to='/'>
+          <S.Logo>nodis</S.Logo>
+        </Link>
 
-        <Search changeSearch={ changeSearch } />
+        { changeSearch && <Search changeSearch={ changeSearch } /> }
       </S.Container>
     </S.Header>
   );
 }
 
 Header.propTypes = {
-  changeSearch: PropTypes.func.isRequired
+  changeSearch: PropTypes.func
 };
