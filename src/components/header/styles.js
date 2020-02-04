@@ -4,6 +4,7 @@ import media from '../../styles/media-queries';
 export const Header = styled.header`
   background-color: ${(props) => props.theme.palette.primary};
   color: ${(props) => props.theme.palette.white};
+  margin-bottom: 30px;
   position: relative;
 `;
 
