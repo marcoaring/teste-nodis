@@ -9,7 +9,8 @@ const theme = {
     black: '#000',
     primary: '#1c9956',
     primaryHover: '#37c478',
-    textColor: '#333'
+    textColor: '#333',
+    error: 'red'
   }
 };
 
