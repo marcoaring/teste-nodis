@@ -90,10 +90,3 @@ $RECYCLE.BIN/
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
-
-# test and coverage files
-coverage/
-tests/coverage/
-tests/cobertura.xml
-cobertura.xml
-tests.xml

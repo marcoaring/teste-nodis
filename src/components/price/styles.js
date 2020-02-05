@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import media from '../../styles/media-queries';
 
 export const OldPrice = styled.span`
   color: ${(props) => props.theme.palette.textColor};
