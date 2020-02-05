@@ -1,6 +1,6 @@
 {
   "name": "teste-nodis",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "build:dev": "npm run clean && npm run env:dev -- gatsby build",
     "build:hmg": "npm run clean && npm run env:hmg -- gatsby build",
