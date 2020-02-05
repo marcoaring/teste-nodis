@@ -2,11 +2,14 @@ import axios from 'axios';
 
 import env from '../../../environment';
 
-export const fetchData = async () => {
+export const fetchData = async (sku) => {
   try {
-    const products = (await axios.get(`${env.API_URL}skus`)).data;
+    const data = (await axios.get(`
+      ${env.API_URL}skus/
+      ${(sku) ? sku : ''}
+    `)).data;
 
-    return products;
+    return data;
   } catch (err) {
     throw err;
   }

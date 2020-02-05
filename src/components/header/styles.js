@@ -18,6 +18,7 @@ export const Container = styled.section`
 `;
 
 export const Logo = styled.h1`
+  color: ${(props) => props.theme.palette.white};
   font-family: ${(props) => props.theme.fonts.fontRubik};
 
   ${ media.mobile`
