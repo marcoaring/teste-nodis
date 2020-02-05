@@ -8,7 +8,7 @@ import * as S from './styles';
 
 export default function ProductDetail({ product }) {
   const [showModal, changeShowModal] = useState(false);
-  const [status, changeStatus] = useState(false);
+  const [status, changeStatus] = useState({});
 
   const sendProduct = () => {
     changeShowModal(true);

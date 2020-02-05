@@ -13,7 +13,7 @@ export default function ProductPage({location}) {
   const [product, changeProduct] = useState({});
   const [sku, changeSku] = useState((location.state) ? location.state.sku : location.pathname.split('/').pop());
   const [showModal, changeShowModal] = useState(false);
-  const [status, changeStatus] = useState(false);
+  const [status, changeStatus] = useState({});
 
   useEffect(() => {
     fetchData(sku).then((data) => {

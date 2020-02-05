@@ -1,8 +1,12 @@
 import styled from 'styled-components';
+import media from '../../styles/media-queries';
 
 export const Modal = styled.div`
   .rodal-dialog {
+    align-items: center;
     background-color: ${props => props.theme.palette.white};
+    display: flex;
+    justify-content: center;
     padding: 0 15px 15px;
 
     .rodal-close {
@@ -23,6 +27,11 @@ export const Modal = styled.div`
         }
       }
     }
+
+    ${ media.mobile`
+      height: 60% !important;
+      width: 94% !important;
+    `}
   }
 
   &.-error {
