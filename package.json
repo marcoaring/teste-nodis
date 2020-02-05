@@ -16,22 +16,17 @@
     "start:prod": "npm run env:prod -- gatsby develop --open",
     "start:hmg": "npm run env:hmg -- gatsby develop --open",
     "start": "npm run env:dev -- gatsby develop --open",
-    "test:coverage": "jest --coverage --passWithNoTests",
-    "test:watch": "jest --watch",
-    "test": "jest --config jest.config.js --no-cache --passWithNoTests",
     "release": "standard-version -t ''"
   },
   "private": true,
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "npm run test:coverage"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "babel-jest": "^25.1.0",
     "gatsby": "^2.19.5",
     "gatsby-image": "^2.2.39",
     "prop-types": "^15.7.2",
@@ -74,7 +69,6 @@
     "gatsby-transformer-sharp": "^2.3.13",
     "husky": "^4.2.1",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^25.1.0",
     "prettier": "^1.19.1",
     "resolve-url-loader": "^3.1.1",
     "rimraf": "^3.0.0",
