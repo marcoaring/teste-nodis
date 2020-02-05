@@ -11,7 +11,7 @@ export const fetchData = async (sku) => {
 
     return data;
   } catch (err) {
-    throw err;
+    return { 'error': true };
   }
 };
 
