@@ -26,7 +26,7 @@
     }
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "gatsby": "^2.19.5",
     "gatsby-image": "^2.2.39",
     "prop-types": "^15.7.2",
